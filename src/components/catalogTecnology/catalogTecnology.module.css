@@ -1,0 +1,259 @@
+.containerMarketing {
+  width: 100%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  margin-top: 100px;
+}
+
+.titleCatalog {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.titleCatalog h2 {
+  font-size: 3.2rem;
+  font-family: var(--font-darkforce);
+  color: #ffca00;
+  width: 50%;
+  text-align: center;
+  line-height: 0.9;
+}
+
+.titleCatalog h3 {
+  font-size: 2.2rem;
+  font-family: var(--font-masafont);
+  color: grey;
+  width: 75%;
+  text-align: center;
+  width: 50%;
+  text-align: center;
+}
+
+.flexServicesMkt {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 35px;
+  margin-top: 50px;
+}
+
+.flexServicesMkt span {
+  background-color: rgb(24, 24, 24);
+  width: 80%;
+  height: 2px;
+}
+
+.itemService {
+  width: 80%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  position: relative;
+}
+
+.itemLeft {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
+  z-index: 1;
+}
+
+.itemLeft h4 {
+  font-size: 3rem;
+  font-family: var(--font-darkforce);
+  color: #00a0ff;
+}
+
+.itemLeft h5 {
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+}
+
+.itemRight {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 30px;
+  z-index: 1;
+}
+
+.itemRight h3 {
+  font-size: 1.2rem;
+  color: grey;
+  font-weight: 200;
+  width: 70%;
+  letter-spacing: 1px;
+  line-height: 1.2;
+}
+
+.bgIcon {
+  position: absolute;
+  width: 65%;
+  height: 70%;
+}
+
+.bgIcon img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+.btnDirectHome {
+  height: 45px;
+  padding: 0px 35px 0px 20px;
+  border-radius: 50px;
+  border: 2px solid black;
+  background-color: #00a0ff;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.btnDirectHome p {
+  font-size: 1.4rem;
+  font-family: var(--font-darkforce);
+  color: black;
+  line-height: 0.5;
+  margin-bottom: -3px;
+}
+
+.btnDirectHome span {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #00a0ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: -10px;
+  transform: rotate(90deg);
+  border: 2px solid black;
+}
+
+.btnDirectHome:hover {
+  background-color: #ffca00;
+}
+
+.btnDirectHome:hover span {
+  background-color: #ffca00;
+}
+
+.itemService:nth-child(4) .itemLeft h4 {
+  color: #ff3c3a;
+}
+
+.itemService:nth-child(4) .itemRight .btnDirectHome {
+  background-color: #ff3c3a;
+}
+
+.itemService:nth-child(4) .itemRight .btnDirectHome span {
+  background-color: #ff3c3a;
+}
+
+.itemService:nth-child(4) .itemRight .btnDirectHome:hover {
+  background-color: #ffca00;
+}
+
+.itemService:nth-child(4) .itemRight .btnDirectHome:hover span {
+  background-color: #ffca00;
+}
+
+.itemService:nth-child(8) .itemLeft h4 {
+  color: #ff3c3a;
+}
+
+.itemService:nth-child(8) .itemRight .btnDirectHome {
+  background-color: #ff3c3a;
+}
+
+.itemService:nth-child(8) .itemRight .btnDirectHome span {
+  background-color: #ff3c3a;
+}
+
+.itemService:nth-child(8) .itemRight .btnDirectHome:hover {
+  background-color: #ffca00;
+}
+
+.itemService:nth-child(8) .itemRight .btnDirectHome:hover span {
+  background-color: #ffca00;
+}
+
+
+@media (max-width: 550px) {
+  .titleCatalog h2 {
+    font-size: 2.2rem;
+    width: 80%;
+  }
+
+  .titleCatalog h3 {
+    font-size: 2rem;
+    font-family: var(--font-masafont);
+    color: grey;
+    width: 85%;
+  }
+
+  .flexServicesMkt {
+    gap: 150px;
+    margin-top: 100px;
+  }
+
+  .itemService {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .itemLeft {
+    width: 80%;
+    align-items: center;
+    gap: 0px;
+  }
+
+  .itemLeft h4 {
+    font-size: 2.6rem;
+  }
+
+  .itemRight {
+    width: 80%;
+    align-items: center;
+  }
+
+  .itemRight h3 {
+    font-size: 1.1rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .bgIcon {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    left: 0px;
+    top: -140px;
+  }
+
+  .flexServicesMkt span {
+    display: none;
+  }
+}

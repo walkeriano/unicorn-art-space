@@ -1,0 +1,146 @@
+.containerServices {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 200px;
+  color: white;
+}
+
+.flexServices {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.cardBox {
+  width: 40%;
+  height: 65vh;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.infoCard {
+  z-index: 100;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: -40px;
+}
+
+.infoCard h3 {
+  color: yellow;
+  font-family: var(--font-darkforce);
+  font-size: 2.4rem;
+  line-height: 0;
+  letter-spacing: 1px;
+  -webkit-text-stroke: 2px black;
+  text-shadow: 4px 4px 0px black;
+}
+
+.infoCard p {
+  width: 60%;
+  text-align: center;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  font-weight: 300;
+  line-height: 1.3;
+  color: white;
+}
+
+.infoCard button {
+  background-color: black;
+  color: #ffca00;
+  font-family: var(--font-darkforce);
+  border: 1px solid #ffca00;
+  letter-spacing: 1px;
+  height: 40px;
+  padding: 0px 20px;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  line-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  filter: grayscale(1);
+  opacity: 0.5;
+}
+
+.cardBox:hover .infoCard button {
+  filter: grayscale(0);
+  opacity: 1;
+}
+
+.imageBoxCard {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.imageBoxCard img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 35px 35px 0px 0px;
+  border: 3px solid grey;
+  filter: grayscale(1);
+  opacity: 0.7;
+}
+
+.imageBoxCard:hover img {
+  border: 3px solid yellow;
+  filter: grayscale(0);
+  opacity: 1;
+}
+
+.imageBoxCard span {
+  width: 100%;
+  position: absolute;
+  height: 50%;
+  background: linear-gradient(rgba(0, 0, 0, 0), black);
+  z-index: 1;
+  bottom: 0px;
+}
+
+@media (max-width: 550px) {
+  .containerServices {
+    margin-top: 100px;
+    gap: 100px;
+  }
+
+  .flexServices {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+  }
+
+  .cardBox {
+    width: 90%;
+    height: 50vh;
+  }
+
+  .infoCard h3 {
+    font-size: 2.2rem;
+    width: 70%;
+    line-height: 0.7;
+    text-align: center;
+  }
+
+  .infoCard p {
+    width: 75%;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+  }
+}

@@ -1,0 +1,259 @@
+.heroContainer {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  background-color: #00a0ff;
+  position: relative;
+}
+
+.bgTexture {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.titleBox {
+  z-index: 2;
+  width: 50%;
+  position: absolute;
+  right: 4%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 20px;
+  animation: lightIntro 2s ease-in-out;
+}
+
+.titleBox h1 {
+  width: 80%;
+  font-size: 4rem;
+  font-family: var(--font-darkforce);
+  color: #ffca00;
+  -webkit-text-stroke: 2px black;
+  line-height: 0.7;
+  text-shadow: 4px 4px 0px black;
+  text-align: end;
+}
+
+.titleBox h2 {
+  width: 60%;
+  font-size: 2rem;
+  color: black;
+  font-family: var(--font-masafont);
+  line-height: 1;
+  letter-spacing: -1px;
+  text-align: right;
+}
+
+.contextService {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  z-index: 1;
+  position: relative;
+}
+
+.contImg {
+  position: relative;
+  width: 50%;
+  height: 76%;
+  z-index: 50;
+}
+
+.contImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  animation: l16 2s ease-in-out;
+}
+
+@keyframes l16 {
+  0% {
+    transform: translateY(150px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.contLight {
+  position: absolute;
+  width: 70%;
+  height: 75%;
+  right: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.contLight .normalBg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left;
+  animation: lightIntro 2s ease-in-out;
+}
+
+.contLight .responsiveBg {
+  display: none;
+}
+
+@keyframes lightIntro {
+  0% {
+    opacity: 0;
+    transform: translateX(150px);
+  }
+  0% {
+    opacity: 0;
+    transform: translateX(150px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.btnDirectHome {
+  height: 45px;
+  padding: 0px 35px 0px 20px;
+  border-radius: 50px;
+  border: 2px solid black;
+  background-color: #ffca00;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.btnDirectHome p {
+  font-size: 1.4rem;
+  font-family: var(--font-darkforce);
+  color: black;
+  line-height: 0.5;
+  margin-bottom: -3px;
+}
+
+.btnDirectHome span {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #ffca00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: -10px;
+  transform: rotate(90deg);
+  border: 2px solid black;
+}
+
+.btnDirectHome:hover {
+  background-color: #00A0FF;
+}
+
+.btnDirectHome:hover span {
+  background-color: #00A0FF;
+}
+
+.btnContactFixed {
+  position: absolute;
+  z-index: 1;
+  bottom: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btnContactFixed button {
+  padding: 10px 15px;
+  border-radius: 50px;
+  border: 2px solid rgb(130, 55, 55);
+  background-color: #ffca00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.btnContactFixed button p {
+  font-size: 1.2rem;
+  font-family: var(--font-darkforce);
+  letter-spacing: 1px;
+  line-height: 0;
+}
+
+.btnContactFixed button:hover {
+  background-color: #FF3C3A;
+}
+
+@media (max-width: 550px) {
+  .heroContainer {
+    flex-direction: column;
+  }
+
+  .titleBox {
+    top: 150px;
+    width: 100%;
+    right: 0px;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+
+  .titleBox h1 {
+    width: 80%;
+    font-size: 2.9rem;
+    text-align: center;
+  }
+
+  .titleBox h2 {
+    width: 80%;
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .contextService {
+    flex-direction: column;
+    padding-left: 0px;
+    justify-content: flex-end;
+  }
+
+  .contImg {
+    width: 100%;
+    height: 50%;
+  }
+
+  .contLight {
+    position: absolute;
+    width: 100%;
+    height: 65%;
+    top: 0px;
+    right: 0px;
+  }
+
+  .contLight .normalBg {
+    display: none;
+  }
+
+  .contLight .responsiveBg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom;
+  }
+}

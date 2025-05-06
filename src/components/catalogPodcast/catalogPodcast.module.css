@@ -1,0 +1,259 @@
+.containerCatalog {
+  width: 90%;
+  height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  margin-top: 100px;
+  gap: 30px;
+}
+
+.containerLeft {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.infoCatalog {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 30px;
+}
+
+.infoCatalog h3 {
+  color: #ffca00;
+  font-family: var(--font-darkforce);
+  width: 80%;
+  font-size: 3rem;
+  line-height: 0.8;
+  letter-spacing: 2px;
+}
+
+.infoCatalog h4 {
+  color: grey;
+  font-family: var(--font-masafont);
+  width: 60%;
+  font-size: 1.5rem;
+}
+
+.caracteristicaService {
+  color: grey;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  gap: 30px;
+  margin-top: 10px;
+}
+
+.caracteristicaServiceResponsive {
+  display: none;
+}
+
+.itemPropiedades {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.datosItem {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 5px;
+}
+
+.datosItem p:nth-child(1) {
+  font-weight: 200;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+.datosItem p:nth-child(2) {
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+}
+
+.optionBox {
+  width: 100%;
+  height: 40%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas de igual tamaño */
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.optionBoxResponsive {
+  display: none;
+}
+
+.boxItem {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.boxItem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+  filter: grayscale(1);
+  opacity: 0.5;
+}
+
+.boxItem img:hover {
+  opacity: 1;
+}
+
+.boxItem.active {
+  outline: 2px solid #00b931;
+  cursor: default;
+}
+
+.boxItem.active img {
+  filter: grayscale(0);
+  opacity: 1;
+}
+
+.containerRight {
+  width: 50%;
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 30px;
+}
+
+.containerRight span {
+  position: absolute;
+  background-color: #ffca00;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid black;
+  width: 50px;
+  aspect-ratio: 1;
+}
+
+.containerRight .visualizar {
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+  cursor: pointer;
+}
+
+.containerRight:hover .visualizar {
+  transform: scale(1.2); /* zoom al hacer hover */
+}
+
+.containerRight:hover span {
+  display: none;
+}
+
+@media (max-width: 550px) {
+  .containerCatalog {
+    width: 90%;
+    height: auto;
+    flex-direction: column;
+  }
+
+  .containerLeft {
+    width: 100%;
+    height: auto;
+    justify-content: flex-start;
+  }
+
+  .infoCatalog {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+
+  .infoCatalog h3 {
+    width: 80%;
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  .infoCatalog h4 {
+    width: 100%;
+    text-align: center;
+  }
+
+  .caracteristicaService {
+    display: none;
+  }
+
+  .optionBox {
+    display: none;
+  }
+
+  .containerRight {
+    width: 100%;
+    height: 50vh;
+  }
+
+  .optionBoxResponsive {
+    width: 100%;
+    height: 25vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas de igual tamaño */
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .caracteristicaService {
+    display: none;
+  }
+
+  .caracteristicaServiceResponsive {
+    display: flex;
+    color: grey;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 45px;
+    margin-top: 40px;
+  }
+
+  .itemPropiedades {
+    flex-direction: column;
+  }
+  
+  .datosItem {
+    align-items: center;
+  }
+
+  .datosItem p:nth-child(1) {
+    font-size: 1rem;
+  }
+  
+  .datosItem p:nth-child(2) {
+    font-size: 1.4rem;
+  }
+}

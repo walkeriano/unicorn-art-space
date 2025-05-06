@@ -1,0 +1,65 @@
+.contLoading {
+  width: 100svw;
+  height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  position: relative;
+  background: linear-gradient(45deg, #00a0ff, #ff3c3a, #ffca00);
+}
+.logoWrapper {
+  position: relative;
+  z-index: 1;
+}
+.contExpand {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.5;
+}
+
+.expand {
+  width: 200%;
+  height: 200%;
+  object-fit: contain;
+  animation: rotate 10s linear infinite;
+  opacity: 0.1;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loader {
+  height: 4px;
+  width: 250px;
+  --c: no-repeat linear-gradient(#ffca00 0 0);
+  background: var(--c), var(--c), #00a0ff;
+  background-size: 60% 100%;
+  animation: l16 4s infinite;
+  z-index: 1;
+}
+
+@keyframes l16 {
+  0% {
+    background-position: -150% 0, -150% 0;
+  }
+  66% {
+    background-position: 250% 0, -150% 0;
+  }
+  100% {
+    background-position: 250% 0, 250% 0;
+  }
+}
