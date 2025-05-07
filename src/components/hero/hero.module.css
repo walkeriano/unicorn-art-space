@@ -39,7 +39,7 @@
   cursor: pointer;
 }
 
-.btnContactFixed button:last-child{
+.btnContactFixed button:last-child {
   display: none;
 }
 
@@ -103,6 +103,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.contImgResp {
+  display: none;
 }
 
 .contImg .oficialImg {
@@ -227,7 +231,7 @@
   background-color: #ff3c3a;
 }
 
-.boxContact{
+.boxContact {
   display: none;
 }
 
@@ -243,16 +247,65 @@
   }
 
   .contImg {
+    display: none;
+  }
+
+  .contImgResp {
     position: absolute;
     width: 100%;
     height: 55%;
     bottom: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
-  .contImg .oficialImg {
+  .contImgResp .oficialImgRespOne {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     object-position: bottom;
-    transform: rotate(90deg);
-    margin-left: -6px;
+    z-index: 1;
+    animation: l16Resp 2s ease-in-out;
+    margin-left: -5px;
+  }
+
+  @keyframes l16Resp {
+    0% {
+      transform: translateY(150px);
+    }
+    50% {
+      transform: translateY(0px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+
+  .contImgResp .oficialImgResp {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom;
+    z-index: 10;
+    animation: l17Resp 2s ease-in-out;
+    opacity: 0;
+    margin-left: -5px;
+  }
+
+  @keyframes l17Resp {
+    0% {
+      opacity: 1;
+      transform: translateY(150px);
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(0px);
+    }
   }
 
   .contLight {
@@ -261,6 +314,7 @@
     height: 58.5%;
     top: 0px;
     left: 0px;
+    z-index: 100;
   }
 
   .contLight .lightPc {
@@ -282,6 +336,18 @@
     left: auto;
     align-items: center;
     gap: 10px;
+    animation: introResp 2s ease-in-out;
+  }
+
+  @keyframes introResp {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
   }
 
   .titleBox h1 {
@@ -304,9 +370,6 @@
     width: 65%;
     justify-content: space-between;
   }
-
-  
-
 }
 
 @media (max-width: 550px) {
@@ -317,16 +380,16 @@
     flex-direction: column;
     gap: 10px;
   }
-  
+
   .btnContactFixed button {
     padding: 10px 15px 10px 25px;
   }
 
-  .btnContactFixed button:last-child{
+  .btnContactFixed button:last-child {
     display: block;
     padding: 8px 15px 8px 25px;
   }
-  
+
   .btnContactFixed button p {
     display: none;
   }
@@ -336,7 +399,7 @@
   }
 
   .titleBox {
-    top: 140px;
+    top: 150px;
     left: auto;
     align-items: center;
     gap: 10px;
@@ -345,7 +408,7 @@
   .titleBox h1 {
     width: 100%;
     text-align: center;
-    font-size: 2.7rem;
+    font-size: 3.2rem;
     -webkit-text-stroke: 1px black;
     line-height: 0.7;
     text-shadow: 3px 3px 0px black;
@@ -356,7 +419,7 @@
     text-align: center;
   }
 
-  .boxContact{
+  .boxContact {
     display: block;
     position: absolute;
     z-index: 1;

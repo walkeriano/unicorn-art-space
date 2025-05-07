@@ -30,6 +30,10 @@ export default function Hero({ id }) {
           <Image src="/roman-home-2.png" className={styles.oficialImgTwo} fill={true} alt="bg-personaje-service" />
           <Image src="/roman-home.png" className={styles.oficialImg} fill={true} alt="bg-personaje-service" />
         </div>
+        <div className={styles.contImgResp}>
+        <Image src="/roman-vertical2.png" className={styles.oficialImgResp} fill={true} alt="bg-personaje-service" />
+        <Image src="/roman-vertical.png" className={styles.oficialImgRespOne} fill={true} alt="bg-personaje-service" />
+        </div>
       </section>
       <section className={styles.btnContactFixed}>
         <button>
