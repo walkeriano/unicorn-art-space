@@ -154,7 +154,7 @@
     right: 0px;
     top: 0px;
     opacity: 0.1;
-    animation: l16 2s ease-in-out infinite;
+    animation: opacity 2s ease-in-out infinite;
   }
 
   .boxImg img {
@@ -165,7 +165,7 @@
   }
 
 
-  @keyframes l16 {
+  @keyframes opacity {
     0% {
       opacity: 0.3;
     }
