@@ -1,8 +1,8 @@
-"use client";
 import { usePathname } from "next/navigation";
 import styles from "./heroMarketing.module.css";
 import Image from "next/image";
 import Menu from "@/components/menu/menu";
+import Link from "next/link";
 
 export default function HeroMarketing({ id }) {
   const pathname = usePathname();
@@ -47,7 +47,32 @@ export default function HeroMarketing({ id }) {
           <p>mensaje</p>
           <Image src="/mail.svg" width={20} height={18} alt="image-service" />
         </button>
+        <button>
+          <p>mensaje</p>
+          <Image
+            src="/wss-black.svg"
+            width={20}
+            height={20}
+            alt="image-service"
+          />
+        </button>
       </section>
+      <div className={styles.boxContact}>
+        <Link href="/">
+          <Image src="/tk-icon.svg" width={22} height={22} alt="icon-contact" />
+        </Link>
+        <Link href="/">
+          <Image src="/fb-icon.svg" width={22} height={22} alt="icon-contact" />
+        </Link>
+        <Link href="/">
+          <Image
+            src="/ins-icon.svg"
+            width={22}
+            height={22}
+            alt="icon-contact"
+          />
+        </Link>
+      </div>
       <Menu active={pathname.replace("/", "") || "home"} />
       <Image
         src="/texture-bg.svg"

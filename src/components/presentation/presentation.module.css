@@ -98,10 +98,10 @@
   font-size: 1.3rem;
   font-family: var(--font-darkforce);
   line-height: 0.5;
+  color: black;
 }
 
 .btnPresentation span {
-  border: 1px solid red;
   position: absolute;
   right: -10px;
   background-color: #ffca00;

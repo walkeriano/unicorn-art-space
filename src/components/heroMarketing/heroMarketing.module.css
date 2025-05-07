@@ -189,6 +189,14 @@
   cursor: pointer;
 }
 
+.btnContactFixed button:last-child {
+  display: none;
+}
+
+.boxContact {
+  display: none;
+}
+
 .btnContactFixed button p {
   font-size: 1.2rem;
   font-family: var(--font-darkforce);
@@ -260,5 +268,49 @@
     height: 100%;
     object-fit: cover;
     object-position: bottom;
+  }
+
+
+  .btnContactFixed {
+    bottom: 100px;
+    left: -15px;
+    width: auto;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+
+  .btnContactFixed button {
+    padding: 10px 15px 10px 25px;
+  }
+
+  .btnContactFixed button:last-child {
+    display: block;
+    padding: 8px 15px 8px 25px;
+  }
+
+  .btnContactFixed button p {
+    display: none;
+  }
+
+  .btnDirectHome {
+    display: none;
+  }
+
+  .boxContact {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    bottom: 100px;
+    right: 0px;
+    width: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    padding: 20px 0px;
+    gap: 20px;
+    border-radius: 25px 0px 0px 25px;
   }
 }
